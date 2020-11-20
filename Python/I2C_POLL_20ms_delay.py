@@ -40,7 +40,7 @@ with open("data.csv", "w", newline="") as dataFile:
 			print("Delta us: %6d, RPM: %4.3f, ms since last poll: %2.3f" %(deltaMicros, 8579404/deltaMicros, (newTime - oldTime)/1000000))	# delta us and ms between samples from i2c bus
 			dataWriter.writerow({"edge_dt" : deltaMicros, "calc_RPM" : deltaMicrosToRPMConstant/deltaMicros, "poll_dt" : (newTime - oldTime)/1000000})
 			oldTime = newTime
-			#time.sleep(0.001)
+			time.sleep(0.010)
 		except OSError as e:
 			# print(time.asctime(), e)
 			pass
