@@ -130,3 +130,6 @@ dmypy.json
 
 # Data collection files
 *.csv
+
+# Others
+.idea
