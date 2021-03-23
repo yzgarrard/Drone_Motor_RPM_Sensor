@@ -54,6 +54,5 @@ plot(filtered_timestamps, rolling_average_100_RPM);
 legend("Unfiltered RPM", "10-sample trailing average RPM", "50-sample trailing average", "100-sample trailing average");
 xlabel("Time (s)");
 ylabel("RPM");
-grid on;
-title("RPM vs time");
+title
 hold off;

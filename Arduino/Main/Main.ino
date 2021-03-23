@@ -9,7 +9,7 @@ volatile int flagRecord = 0; //To indicate that a new measurement has been taken
 volatile int consecutiveMeasurementCount = 0;	//Counts the number of consecutive measurements taken after the last I2C poll.
 volatile long oldTime = 0;
 volatile long newTime = 0;
-int address = 11;
+int address = 13;
 
 // A union is used because it stores the same data in ways that makes it convenient to write to as an unsigned long and easy to write over I2C as bytes.
 union Buffer

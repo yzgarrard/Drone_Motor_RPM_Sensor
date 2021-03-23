@@ -51,10 +51,11 @@ def record_data():
         data_writer = csv.DictWriter(dataFile, fieldnames=fieldNames)
 
         # If the data is bad, don't record it.
-        delta_micros = i2c_read_delta_micros(11)
+        delta_micros = i2c_read_delta_micros(12)
         if delta_micros < 0:
             return
         rpm = calculate_rpm(delta_micros)
+        #print(rpm)
         current_time = time.time() - timeOffset
         poll_dt = current_time - prev_poll_time
         data_writer.writerow({"time": current_time,  # sample timestamp in s
